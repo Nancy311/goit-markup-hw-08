@@ -1,0 +1,40 @@
+.logo__link {
+  @include font(700, 26px, 1.17, null);
+  display: block;
+  font-family: 'Raleway', sans-serif;
+  font-style: normal;
+  text-decoration: none;
+
+  @media screen and (max-width: 480px) {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+
+  }
+}
+
+.page-header__logo {
+  @media screen and (min-width: 768px) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+}
+
+.logo__text {
+  color: $accent-color;
+}
+
+.logo__text--color-dark {
+  color: $logo-color;
+}
+
+.logo__text--color-light {
+  color: $background-color;
+}

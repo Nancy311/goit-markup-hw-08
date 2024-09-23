@@ -1,0 +1,60 @@
+/*---------------About-------------------------*/
+.about {
+  @media screen and (max-width: 1199px) {
+    display: none;
+  }
+}
+
+.about__title {
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+    font-weight: 700;
+    line-height: 1.2;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 50px;
+    color: $primary-text-color;
+  }
+
+}
+
+
+.about__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -30px;
+}
+
+.about__item {
+  flex-basis: calc(100% / 3 - 30px);
+  margin-left: 30px;
+}
+
+.about__wrap {
+  position: relative;
+}
+
+.about__text {
+  @include font(700, null, 1.17, null);
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 70px;
+  text-transform: uppercase;
+  text-align: center;
+  color: $background-color;
+  background-color: rgba(47, 48, 58, 0.8);
+
+  white-space: nowrap;
+  /* забороняємо пренос на нову строку*/
+  overflow: hidden;
+  /*ховаємо все зайве але треба падінги поставити */
+  text-overflow: ellipsis;
+}
+
+/* Варіант: .about-list-item:not(:last-child) {
+        margin-right: 30px;
+      } */

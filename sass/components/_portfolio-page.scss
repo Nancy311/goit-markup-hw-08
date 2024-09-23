@@ -1,0 +1,150 @@
+/*------------------------------------------------------------ Portfolio -------------------------------*/
+
+/* Button section */
+.btn-list {
+  display: flex;
+  /* margin-top: 94px; */
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 34px;
+}
+
+.btn-list__item {
+  @include font(null, 16px, 1.63, null);
+  height: 38px;
+  border-radius: 4px;
+  font-family: inherit;
+  text-align: center;
+  background-color: #f5f4fa;
+  cursor: pointer;
+  border: 1px solid rgba(238, 238, 238, 1);
+  border-radius: 4px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: $background-color;
+  }
+}
+/* -----------Portfolio List Section-------------- */
+
+.card-set {
+  margin: 0; /*reset */
+  padding: 0;
+  
+  @media screen and (min-width: 768px) {
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between;  */
+  /* margin-right: 0px; */
+  margin-left: -30px;
+  margin-top: -30px; }
+  
+}
+
+.card-set__item {
+  @media screen and (min-width: 768px) {
+  margin: 0; /*reset */
+  padding: 0;
+  flex-basis: calc(100% / 3 - 30px);
+  /*тоже самое что и ширина , хотим 3 колонки чтоб всега было */
+  margin-left: 30px;
+  margin-top: 30px;
+}
+}
+.project {
+  display: block;
+  text-decoration: none;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  cursor: pointer;
+  border: 1px solid rgba(238, 238, 238, 1);
+
+  &:hover,
+  &:focus {
+    box-shadow: 1px 4px 6px 0px rgba(0, 0, 0, 0.16);
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.06);
+    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.12);
+  }
+}
+
+.project__image {
+  position: relative;
+  overflow: hidden; /*or auto*/
+}
+
+.project__image::before {
+  display: inline-block;
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(33, 150, 243, 0.9);
+  opacity: 0;
+  transform: translateY(100%);
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .project:hover &,
+  .project:focus & {
+    /*При ховере сюда возьми его бивор и примени стили*/
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.project__text {
+  @include font(null, 18px, 1.56, null);
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 24px;
+  padding-right: 24px;
+  bottom: 0;
+  transform: translateY(100%);
+  color: #ffffff;
+  background-color: rgba(33, 150, 243, 0.9);
+  opacity: 1;
+  width: 100%;
+  height: 100%;
+  text-align: left;
+  transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  .project:hover &,
+  .project:focus & {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project__text-box {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+.project__title {
+  margin-block-end: 0;
+  margin-block-start: 0;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  text-align: left;
+  color: $primary-text-color;
+}
+
+.project__subtitle {
+  @include font(null, 16px, 1.88, null);
+  margin-block-end: 0;
+  margin-block-start: 0;
+  margin-top: 4px;
+  text-align: left;
+  color: $secondary-text-color;
+}

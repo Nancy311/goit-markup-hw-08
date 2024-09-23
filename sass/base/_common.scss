@@ -1,0 +1,80 @@
+body {
+  max-width: 1600px;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 14px;
+  color: $primary-text-color;
+  background-color: $background-color;
+  letter-spacing: 0.03em;
+
+}
+
+ul {
+  list-style: none;
+  padding-inline-start: 0px;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+}
+
+img {
+  display: block;
+  /* чтоб у картинки убрался маржин боттом */
+  max-width: 100%;
+  /* чтоб картинка не расширялась больше чем нужно */
+  width: 100%;
+  height: auto;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+  margin: 0;
+  margin-block-end: 0;
+  margin-block-start: 0;
+}
+
+/* Контейнер */
+
+.container {
+  margin-left: 0;
+  /*будет по центру */
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  /* padding: 15px делает репета и тогда ставит ширину видз 1200рх*/
+
+  @media screen and (min-width: 480px) {
+    // width: 480px; //До 480 отзывчивый как резиновый буддет тянуться а потом стоп как только будет 480
+    max-width: 480px;
+  }
+
+  @media screen and (min-width: 768px) {
+    max-width: 768px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    max-width: 1200px;
+    // padding-left: 215px;
+    // padding-right: 215px;
+  }
+}
+
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  margin: 0;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+
+  // @media screen and (min-width: $tablet) {
+  //   padding-top: 94px;
+  //   padding-bottom: 94px;
+  //   margin: 0;
+  // }
+}
