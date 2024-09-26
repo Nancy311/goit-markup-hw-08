@@ -39,13 +39,16 @@ p {
 /* Контейнер */
 
 .container {
-  margin-left: 0;
+  width: 100%;
+  margin: 0 auto; // margin-left: 0;
   /*будет по центру */
-  margin-right: auto;
+  // margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
-  /* padding: 15px делает репета и тогда ставит ширину видз 1200рх*/
 
+
+  // //начинаем верстать от 320px макета нет но ориентир как на 480
+  // 320 сттартовий рощмір на якому перевіряється макет 
   @media screen and (min-width: 480px) {
     // width: 480px; //До 480 отзывчивый как резиновый буддет тянуться а потом стоп как только будет 480
     max-width: 480px;
