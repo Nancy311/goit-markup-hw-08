@@ -1,16 +1,31 @@
 /*------------------------------------------------------------ Portfolio -------------------------------*/
 
 /* Button section */
+.btn-wrap {
+  @media screen and (min-width: 480px)and (max-width: 767px) {
+    max-width: 326px;
+  }
+}
+
+
 .btn-list {
   display: flex;
+  flex-wrap: wrap;
+  margin-left: 0;
   /* margin-top: 94px; */
-  justify-content: center;
+
   gap: 8px;
   margin-bottom: 34px;
+
+  @media screen and (min-width: 768px) {
+    justify-content: center;
+
+  }
 }
 
 .btn-list__item {
-  @include font(null, 16px, 1.63, null);
+
+  @include font(500, 16px, 1.63, null);
   height: 38px;
   border-radius: 4px;
   font-family: inherit;
@@ -28,41 +43,51 @@
     color: $background-color;
   }
 }
+
+.btn-list__item--active {
+  background-color: $accent-color;
+  color: $background-color;
+}
+
+
 /* -----------Portfolio List Section-------------- */
 
 .card-set {
-  margin: 0; /*reset */
+  margin: 0;
+  /*reset */
   padding: 0;
-  
+
+  @media screen and (min-width: 480px) and (max-width: 767px) {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+  }
+
   @media screen and (min-width: 768px) {
-  display: flex;
-  flex-wrap: wrap;
-  /* justify-content: space-between;  */
-  /* margin-right: 0px; */
-  margin-left: -30px;
-  margin-top: -30px; }
-  
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+
+  }
+
 }
 
 .card-set__item {
-  @media screen and (min-width: 768px) {
-  margin: 0; /*reset */
-  padding: 0;
-  flex-basis: calc(100% / 3 - 30px);
-  /*тоже самое что и ширина , хотим 3 колонки чтоб всега было */
-  margin-left: 30px;
-  margin-top: 30px;
-}
-}
-.project {
-  display: block;
-  text-decoration: none;
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  overflow: hidden;
-  cursor: pointer;
   border: 1px solid rgba(238, 238, 238, 1);
+  margin: 0;
+  padding: 0;
+  /*reset */
+
+  @media screen and (min-width: 768px) {
+    flex-basis: calc(100% / 2 - 30px);
+  }
+
+  @media screen and (min-width: 1200px) {
+
+    flex-basis: calc(100% / 3 - 30px);
+    /*тоже самое что и ширина , хотим 3 колонки чтоб всега было */
+
+  }
 
   &:hover,
   &:focus {
@@ -72,9 +97,21 @@
   }
 }
 
+.project {
+  display: block;
+  text-decoration: none;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+  cursor: pointer;
+
+}
+
 .project__image {
   position: relative;
-  overflow: hidden; /*or auto*/
+  overflow: hidden;
+  /*or auto*/
 }
 
 .project__image::before {
@@ -97,6 +134,7 @@
     transform: translateY(0);
   }
 }
+
 .project__text {
   @include font(null, 18px, 1.56, null);
   position: absolute;
