@@ -47,14 +47,9 @@
   text-align: center;
   color: $background-color;
   background-color: rgba(47, 48, 58, 0.8);
-
   white-space: nowrap;
   /* забороняємо пренос на нову строку*/
   overflow: hidden;
   /*ховаємо все зайве але треба падінги поставити */
   text-overflow: ellipsis;
 }
-
-/* Варіант: .about-list-item:not(:last-child) {
-        margin-right: 30px;
-      } */

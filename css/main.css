@@ -614,10 +614,6 @@ p {
         это у нас не ссылка поэтому не нужно инлайн и паддинг */
 }
 
-/* .button:hover,
-    button:focus {
-      border-radius: 4px;
-    } */
 /* ----------------------Modal----------------------------*/
 .backdrop {
   position: fixed;
@@ -645,7 +641,8 @@ p {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   /*властивість була перебита тому через пробіл записуємо */
-  padding: 40px;
+  padding: 20px;
+  padding-top: 40px;
   background-color: rgb(255, 255, 255);
   border-radius: 4px;
   box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.2);
@@ -653,13 +650,21 @@ p {
   box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
   /* transform: scale(1); */
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  max-width: 450px;
-  height: 609px;
+  max-width: 300px;
+  height: 581px;
+}
+@media screen and (min-width: 480px) {
+  .modal {
+    max-width: 450px;
+    height: 609px;
+    padding: 40px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal {
     max-width: 528px;
     height: 581px;
+    padding: 40px;
   }
 }
 .backdrop.is-hidden .modal {
@@ -696,16 +701,28 @@ p {
 /*MODAL FORM*/
 .modal__title {
   font-weight: 700;
-  font-size: 20px;
+  font-size: 14px;
   line-height: 1.17;
   margin-bottom: 12px;
   text-align: center;
   color: rgb(33, 33, 33);
 }
+@media screen and (min-width: 480px) {
+  .modal__title {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 1.17;
+  }
+}
 
 .modal__form {
-  width: 370px;
-  height: 342px;
+  width: 260px;
+}
+@media screen and (min-width: 480px) {
+  .modal__form {
+    width: 370px;
+    height: 342px;
+  }
 }
 @media screen and (min-width: 1200px) {
   .modal__form {
@@ -794,11 +811,19 @@ p {
 }
 
 .checkbox label {
-  text-align: left;
-  color: rgb(117, 117, 117);
   font-weight: 400;
-  font-size: 12px;
+  font-size: 10px;
   line-height: 1.17;
+  text-align: center;
+  color: rgb(117, 117, 117);
+}
+@media screen and (min-width: 480px) {
+  .checkbox label {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.17;
+    text-align: left;
+  }
 }
 
 .checkbox input[type=checkbox] {
@@ -810,20 +835,29 @@ p {
 }
 
 .checkbox__label {
-  display: flex;
-  align-items: center;
+  text-align: left;
+}
+@media screen and (min-width: 480px) {
+  .checkbox__label {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .checkbox__icon-wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 16px;
   height: 15px;
   background-color: rgb(255, 255, 255);
   border: 2px solid rgb(0, 0, 0);
   border-radius: 4px;
   margin-right: 10px;
+}
+@media screen and (min-width: 480px) {
+  .checkbox__icon-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .checkbox__icon {
@@ -1006,9 +1040,6 @@ p {
   text-overflow: ellipsis;
 }
 
-/* Варіант: .about-list-item:not(:last-child) {
-        margin-right: 30px;
-      } */
 /*-------------------------Team---------------------------*/
 .team {
   background-color: #f5f4fa;
@@ -1128,7 +1159,8 @@ p {
   width: 100%;
   height: 100%;
   background-color: rgb(255, 255, 255);
-  color: rgb(175, 177, 184); /*задаем цвет чтоб задать потом киррент колир тогда ховер будет легко поставить */
+  color: rgb(175, 177, 184);
+  /*задаем цвет чтоб задать потом киррент колир тогда ховер будет легко поставить */
   border-radius: 50%;
   display: flex;
   justify-content: center;
@@ -1464,7 +1496,6 @@ p {
   display: flex;
   flex-wrap: wrap;
   margin-left: 0;
-  /* margin-top: 94px; */
   gap: 8px;
   margin-bottom: 34px;
 }
@@ -1499,12 +1530,7 @@ p {
 }
 
 /* -----------Portfolio List Section-------------- */
-.card-set {
-  margin: 0;
-  /*reset */
-  padding: 0;
-}
-@media screen and (min-width: 480px) and (max-width: 767px) {
+@media screen and (max-width: 767px) {
   .card-set {
     display: flex;
     flex-direction: column;
@@ -1609,12 +1635,12 @@ p {
 }
 
 .project__title {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06;
   margin-block-end: 0;
   margin-block-start: 0;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 2;
-  letter-spacing: 0.06em;
   text-align: left;
   color: rgb(33, 33, 33);
 }

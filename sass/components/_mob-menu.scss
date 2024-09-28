@@ -4,7 +4,6 @@
 	padding: 0;
 	border: none;
 	background-color: transparent;
-	// text-align: right;
 	margin-left: auto;
 
 	@media screen and (min-width: 768px) {
@@ -29,7 +28,6 @@
 	left: 0;
 	width: 100vw;
 	height: 100vh;
-	// display: none;
 	padding-top: 21px;
 	padding-bottom: 69px; // 48+21 смещение на верхний паддинг изза кнопки;
 	padding-left: 40px;
@@ -44,13 +42,6 @@
 		// overflow: auto; // коли замалий екран appear scroll
 	}
 
-	// @media screen and (min-width: 768px) {
-	// 	display: flex;
-	// 	height: 80px;
-	// 	width: 100%;
-	// 	margin-left: auto;
-	// 	// display: none;
-	// }
 }
 
 .menu-close-btn {
@@ -71,7 +62,6 @@
 }
 
 .menu-nav__item {
-	// margin-bottom: 32px;
 	display: flex;
 	text-decoration: none;
 }
@@ -90,7 +80,7 @@
 	line-height: 1.17;
 	letter-spacing: 0.02em;
 	text-align: left;
-	// padding-bottom: 10px;
+
 
 	&:hover,
 	&:focus {
@@ -135,9 +125,6 @@
 
 }
 
-// .menu-bottom {
-// 	padding-bottom: 40px;
-// }
 
 .menu-soc {
 	margin-top: 64px;
@@ -163,7 +150,6 @@
 	letter-spacing: 0.02em;
 	text-align: left;
 	position: relative;
-	// border-right: 1px solid gray;
 
 	@media screen and (min-width: 480px) {
 		font-size: 18px;

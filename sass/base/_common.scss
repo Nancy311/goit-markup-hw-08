@@ -40,14 +40,13 @@ p {
 
 .container {
   width: 100%;
-  margin: 0 auto; // margin-left: 0;
+  margin: 0 auto;
   /*будет по центру */
-  // margin-right: auto;
   padding-left: 15px;
   padding-right: 15px;
 
 
-  // //начинаем верстать от 320px макета нет но ориентир как на 480
+  // //начинаем верстать от 320px, макета нет но ориентир как на 480
   // 320 сттартовий рощмір на якому перевіряється макет 
   @media screen and (min-width: 480px) {
     // width: 480px; //До 480 отзывчивый как резиновый буддет тянуться а потом стоп как только будет 480
@@ -60,8 +59,6 @@ p {
 
   @media screen and (min-width: 1200px) {
     max-width: 1200px;
-    // padding-left: 215px;
-    // padding-right: 215px;
   }
 }
 
@@ -75,9 +72,4 @@ p {
     padding-bottom: 94px;
   }
 
-  // @media screen and (min-width: $tablet) {
-  //   padding-top: 94px;
-  //   padding-bottom: 94px;
-  //   margin: 0;
-  // }
 }
